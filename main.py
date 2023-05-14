@@ -1,16 +1,17 @@
-# Diberikan contoh sebuah kalimat, silahkan cari kata terpanjang dari kalimat tersebut,
-# jika ada kata dengan panjang yang sama silahkan ambil salah satu
-
-sentence = "Saya sangat senang mengerjakan soal algoritma"
+# factorial test
 
 
-def highest(txt: str):
-    splt = txt.split(" ")
-    result = splt[0]
-    for x in splt:
-        if len(x) > len(result):
-            result = x
+def factorial(num: int):
+    result = 1
+    if num <= 0:
+        return result
+    for x in range(num, 0, -1):
+        result *= x
     return result
 
 
-print(highest(sentence))
+print(factorial(5))
+
+
+# for x in range(1, 11, +1):
+#     print(x)
