@@ -1,16 +1,19 @@
-# is palindrome
+# Terdapat string "NEGIE1", silahkan reverse alphabet nya dengan angka tetap diakhir kata Hasil = "EIGEN1"
 
-text = input("masukan kalimat: ",)
-
-
-def isPalindrome(text: str):
-    revsrText = text[::-1].lower()
-    for x in text.lower():
-        for y in revsrText:
-            if x == y:
-                return True
-            else:
-                return False
+text = "NEGIE123"
 
 
-print(isPalindrome(text))
+def rve(txt: str):
+    str = []
+    num = []
+    result = ""
+    for x in txt:
+        if x.isdigit():
+            num.append(x)
+        else:
+            str.append(x)
+    result += "".join(reversed(str)) + "".join(num)
+    return result
+
+
+print(rve(text))
