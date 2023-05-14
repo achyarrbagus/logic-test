@@ -1,16 +1,17 @@
-# is palindrome
-
-text = input("masukan kalimat: ",)
+# factorial test
 
 
-def isPalindrome(text: str):
-    revsrText = text[::-1].lower()
-    for x in text.lower():
-        for y in revsrText:
-            if x == y:
-                return True
-            else:
-                return False
+def factorial(num: int):
+    result = 1
+    if num <= 0:
+        return result
+    for x in range(num, 0, -1):
+        result *= x
+    return result
 
 
-print(isPalindrome(text))
+print(factorial(5))
+
+
+# for x in range(1, 11, +1):
+#     print(x)
