@@ -1,19 +1,16 @@
-# Terdapat string "NEGIE1", silahkan reverse alphabet nya dengan angka tetap diakhir kata Hasil = "EIGEN1"
+# Diberikan contoh sebuah kalimat, silahkan cari kata terpanjang dari kalimat tersebut,
+# jika ada kata dengan panjang yang sama silahkan ambil salah satu
 
-text = "NEGIE123"
+sentence = "Saya sangat senang mengerjakan soal algoritma"
 
 
-def rve(txt: str):
-    str = []
-    num = []
-    result = ""
-    for x in txt:
-        if x.isdigit():
-            num.append(x)
-        else:
-            str.append(x)
-    result += "".join(reversed(str)) + "".join(num)
+def highest(txt: str):
+    splt = txt.split(" ")
+    result = splt[0]
+    for x in splt:
+        if len(x) > len(result):
+            result = x
     return result
 
 
-print(rve(text))
+print(highest(sentence))
