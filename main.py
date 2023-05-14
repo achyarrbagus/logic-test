@@ -1,16 +1,13 @@
-# is palindrome
+# looping without method
 
-text = input("masukan kalimat: ",)
+def loop(max, ind):
+    result = ind
+    if result == max:
+        return result
 
-
-def isPalindrome(text: str):
-    revsrText = text[::-1].lower()
-    for x in text.lower():
-        for y in revsrText:
-            if x == y:
-                return True
-            else:
-                return False
+    result += 1
+    print(result)
+    loop(max, result)
 
 
-print(isPalindrome(text))
+loop(10, 1)
