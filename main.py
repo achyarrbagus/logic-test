@@ -1,16 +1,16 @@
-# is palindrome
+# Diberikan contoh sebuah kalimat, silahkan cari kata terpanjang dari kalimat tersebut,
+# jika ada kata dengan panjang yang sama silahkan ambil salah satu
 
-text = input("masukan kalimat: ",)
-
-
-def isPalindrome(text: str):
-    revsrText = text[::-1].lower()
-    for x in text.lower():
-        for y in revsrText:
-            if x == y:
-                return True
-            else:
-                return False
+sentence = "Saya sangat senang mengerjakan soal algoritma"
 
 
-print(isPalindrome(text))
+def highest(txt: str):
+    splt = txt.split(" ")
+    result = splt[0]
+    for x in splt:
+        if len(x) > len(result):
+            result = x
+    return result
+
+
+print(highest(sentence))
