@@ -1,18 +1,19 @@
-# fizzbuzz test
+# Terdapat string "NEGIE1", silahkan reverse alphabet nya dengan angka tetap diakhir kata Hasil = "EIGEN1"
 
-def fizbuzz(num: int):
-    result = []
-    for x in range(1, num+1):
-        if x % 3 == 0 and x % 5 == 0:
-            result.append("fizbuzz")
-        elif x % 3 == 0:
-            result.append("fizz")
-        elif x % 5 == 0:
-            result.append("buzz")
+text = "NEGIE123"
+
+
+def rve(txt: str):
+    str = []
+    num = []
+    result = ""
+    for x in txt:
+        if x.isdigit():
+            num.append(x)
         else:
-            result.append(x)
-
+            str.append(x)
+    result += "".join(reversed(str)) + "".join(num)
     return result
 
 
-print(fizbuzz(15))
+print(rve(text))
