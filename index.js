@@ -1,31 +1,3 @@
-// function makeRectangle(col, row) {
-//   for (let i = 1; i <= row; i++) {
-//     let row = "";
-
-//     for (let j = 1; j <= col; j++) {
-//       row += j;
-//     }
-
-//     console.log(row);
-//   }
-// }
-
-// // Contoh pemanggilan fungsi
-
-// console.log(makeRectangle(5, 3));
-
-// const makeRightTriangle = (tinggi) => {
-//   for (let x = 1; x <= tinggi; x++) {
-//     let row = "";
-//     for (let j = 10; j >= x; j--) {
-//       row += "#";
-//     }
-//     console.log(row);
-//   }
-// };
-
-// console.log(makeRightTriangle(10));
-
 // jelaskan logika/flow utk mendeteksi nomor handphone cantik ,
 // dari input yang dimasukkan oleh user.
 // nomor cantik yang harus dideteksi adalah nomor yang berisi 2 gugusan ,
@@ -33,25 +5,70 @@
 // contoh gugusan : 22, 555
 // contoh nomor cantik : 0813-233-5777
 
-// let input = "08132335777".split("");
+// let input = "08132395477".split("");
 
-// // for (let x = 0; x <= input.length; x++) {
-// //   console.log(x);
-// // }
-
-// for (let x = input; x <= input.length; x++) {
-//   console.log(x);
+// // Corrected loop
+// result = false;
+// for (let x = 0; x <= input.length; x++) {
+//   if (input[x] === input[x + 1] || input[x] === (input[x + 1] === input[x + 2])) {
+//     result = true;
+//     break;
+//   }
 // }
 
-let input = "08132395477".split("");
+// console.log(result);
 
-// Corrected loop
-result = false;
-for (let x = 0; x < input.length; x++) {
-  if (input[x] === input[x + 1] || input[x] == (input[x + 1] && input[x + 2])) {
-    result = true;
-    break;
+// function solution(year) {
+//   result = Math.ceil(year / 100);
+//   return result;
+// }
+
+// console.log(solution(1905));
+
+// let w = "aabaa";
+
+// function solution(inputString) {
+//   let clearString = String(inputString).split("").reverse().join("");
+//   let result = true;
+//   if (clearString !== inputString) {
+//     result = false;
+//     return;
+//   }
+//   return result;
+// }
+// console.log(solution(w));
+
+function fakctorial(Number) {
+  let result = 1;
+  for (let x = Number; x >= 1; x--) {
+    result *= x;
+  }
+  return result;
+}
+
+console.log(fakctorial(10));
+
+function reverseText(arrayText) {
+  at = String(arrayText).split("");
+  let result = [];
+  while (at.length) {
+    result.push(at.pop());
+  }
+  return result.join("");
+}
+
+console.log(reverseText("katak"));
+
+let text = "katak";
+
+function isPalindrome(text, reverseText) {
+  for (let x = 0; x <= String(text).split("").length; x++) {
+    if (text[x] != reverseText[x]) {
+      return false;
+    } else {
+      return true;
+    }
   }
 }
 
-console.log(result);
+console.log(isPalindrome(text, reverseText(text)));
